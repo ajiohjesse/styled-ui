@@ -20,6 +20,10 @@ const accordionDown = keyframes`
 }
 `;
 
+export const StyledAccordionItem = styled(AccordionPrimitive.Item)`
+  border-bottom: 1px solid hsl(${p => p.theme.colors.border});
+`;
+
 export const StyledAccordionHeader = styled(AccordionPrimitive.Header)`
   display: flex;
 `;
@@ -33,6 +37,7 @@ export const StyledAccordionChevron = styled(ChevronDown)`
 
 export const StyledAccordionTrigger = styled(AccordionPrimitive.Trigger)`
   display: flex;
+  gap: 8px;
   flex: 1;
   align-items: center;
   justify-content: space-between;

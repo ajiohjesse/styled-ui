@@ -34,6 +34,7 @@ const SectionTitle = styled.h2`
 
 const SectionContent = styled.div`
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 1rem;
 `;

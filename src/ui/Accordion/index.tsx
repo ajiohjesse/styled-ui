@@ -5,6 +5,7 @@ import {
   StyledAccordionChevron,
   StyledAccordionContent,
   StyledAccordionHeader,
+  StyledAccordionItem,
   StyledAccordionTrigger,
 } from './styles';
 
@@ -13,7 +14,7 @@ const Accordion = AccordionPrimitive.Root;
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->((props, ref) => <AccordionPrimitive.Item ref={ref} {...props} />);
+>((props, ref) => <StyledAccordionItem ref={ref} {...props} />);
 
 AccordionItem.displayName = 'AccordionItem';
 
