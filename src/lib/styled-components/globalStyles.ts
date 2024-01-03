@@ -169,9 +169,9 @@ button, select {
   text-transform: none;
 }
 
-button, [type='button'], [type='reset'], [type='submit'] {
-  appearance: button;
+button {
   -webkit-appearance: button;
+  appearance: button;
   background-color: transparent;
   background-image: none;
 }
@@ -193,8 +193,8 @@ progress {
 }
 
 [type='search'] {
-  appearance: textfield;
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 
