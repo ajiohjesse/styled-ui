@@ -1,9 +1,11 @@
+import { Terminal } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from './ui/Accordion';
+import { Alert, AlertDescription, AlertTitle } from './ui/Alert';
 import Button from './ui/Button';
 
 function App() {
@@ -38,6 +40,30 @@ function App() {
           paddingBlock: '2rem',
         }}
       >
+        <div
+          style={{
+            display: 'grid',
+            gap: '1rem',
+          }}
+        >
+          <Alert>
+            <Terminal style={{ width: '1rem', height: '1rem' }} />
+            <AlertTitle>Heads up!</AlertTitle>
+            <AlertDescription>
+              You can add components to your app using the cli.
+            </AlertDescription>
+          </Alert>
+
+          <Alert variant='destructive'>
+            <Terminal style={{ width: '1rem', height: '1rem' }} />
+            <AlertTitle>Error!</AlertTitle>
+            <AlertDescription>
+              An error occured while trying to add components to your app using
+              the cli.
+            </AlertDescription>
+          </Alert>
+        </div>
+
         <Accordion type='single' collapsible>
           <AccordionItem value='item-1'>
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
@@ -55,6 +81,8 @@ function App() {
           </AccordionItem>
         </Accordion>
       </div>
+
+      <div></div>
     </>
   );
 }
