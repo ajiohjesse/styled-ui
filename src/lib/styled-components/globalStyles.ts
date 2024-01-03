@@ -1,75 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-/* *,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  border-color: ${p => p.theme.colors.border};
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  background-color: ${p => p.theme.colors.background};
-  color: ${p => p.theme.colors.foreground};
-  font-family: ${p => p.theme.font?.sans || 'sans-serif'};
-
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  font-style: italic;
-  background-repeat: no-repeat;
-  background-size: cover;
-  shape-margin: 1rem;
-}
-
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
-} */
-
 *, ::before, ::after {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
-  border-color: ${p => p.theme.colors.border};
+  border-color: hsl(${p => p.theme.colors.border});
 }
 
 ::before, ::after {
@@ -91,8 +27,8 @@ html, :host {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: ${p => p.theme.colors.background};
-  color: ${p => p.theme.colors.foreground};
+  background-color: hsl(${p => p.theme.colors.background});
+  color: hsl(${p => p.theme.colors.foreground});
   font-family: ${p => p.theme.font?.sans || 'sans-serif'};
 
 }
