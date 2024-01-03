@@ -99,21 +99,21 @@ export const StyledButton = styled.button<StyledButtonProps>`
     $variant === 'destructive'
       ? destructiveButtonCss
       : $variant === 'ghost'
-      ? ghostButtonCss
-      : $variant === 'secondary'
-      ? secondaryButtonCss
-      : $variant === 'outline'
-      ? outlineButtonCss
-      : $variant === 'link'
-      ? linkButtonCss
-      : defaultButtonCss}
+        ? ghostButtonCss
+        : $variant === 'secondary'
+          ? secondaryButtonCss
+          : $variant === 'outline'
+            ? outlineButtonCss
+            : $variant === 'link'
+              ? linkButtonCss
+              : defaultButtonCss}
 
   ${({ $size }) =>
     $size === 'icon'
       ? iconSizeButtonCss
       : $size === 'sm'
-      ? smallSizeButtonCss
-      : $size === 'lg'
-      ? largeSizeButtonCss
-      : normalSizeButtonCss}
+        ? smallSizeButtonCss
+        : $size === 'lg'
+          ? largeSizeButtonCss
+          : normalSizeButtonCss}
 `;

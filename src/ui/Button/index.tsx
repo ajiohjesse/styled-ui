@@ -1,6 +1,6 @@
+import { Slot } from '@radix-ui/react-slot';
 import { forwardRef } from 'react';
 import { StyledButton } from './styles';
-import { Slot } from '@radix-ui/react-slot';
 
 export type ButtonVariant =
   | 'default'
@@ -47,7 +47,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...rest}
       />
     );
-  }
+  },
 );
 Button.displayName = 'Button';
 
