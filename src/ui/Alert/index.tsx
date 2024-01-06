@@ -7,7 +7,7 @@ import {
 
 export type AlertVariant = 'default' | 'destructive';
 
-interface AlertProps {
+export interface AlertProps {
   variant?: AlertVariant;
 }
 

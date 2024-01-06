@@ -12,7 +12,7 @@ export type ButtonVariant =
 
 export type ButtonSize = 'default' | 'sm' | 'lg' | 'icon';
 
-interface ButtonProps extends React.ComponentProps<'button'> {
+export interface ButtonProps extends React.ComponentProps<'button'> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   asChild?: boolean;

@@ -3,6 +3,7 @@ import AlertDialogPreview from './components/AlertDialogPreview';
 import AlertPreview from './components/AlertPreview';
 import AspectRatioPreview from './components/AspectRatioPreview';
 import AvatarPreview from './components/AvatarPreview';
+import BadgePreview from './components/BadgePreview';
 import ButtonPreview from './components/ButtonPreview';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <AlertDialogPreview />
       <AspectRatioPreview />
       <AvatarPreview />
+      <BadgePreview />
     </div>
   );
 }

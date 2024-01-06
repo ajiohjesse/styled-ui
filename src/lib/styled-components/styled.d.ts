@@ -5,8 +5,12 @@ declare module 'styled-components' {
   export interface DefaultTheme extends ThemeType {}
 }
 
-declare module 'react' {
-  interface Attributes {
-    css?: CSSProp<MyTheme>;
-  }
-}
+/**
+ * css prop is currently not configured
+ */
+
+// declare module 'react' {
+//   interface Attributes {
+//     css?: CSSProp<MyTheme>;
+//   }
+// }
