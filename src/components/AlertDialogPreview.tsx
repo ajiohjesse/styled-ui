@@ -9,13 +9,16 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/ui/AlertDialog';
+import Button from '@/ui/Button';
 import Section from './Section';
 
 const AlertDialogPreview = () => {
   return (
     <Section title='AlertDialog'>
       <AlertDialog>
-        <AlertDialogTrigger>Open</AlertDialogTrigger>
+        <AlertDialogTrigger asChild>
+          <Button>Open Dialog</Button>
+        </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
