@@ -45,13 +45,14 @@ export const StyledAlert = styled.div<StyledAlertProps>`
 
 export const StyledAlertTitle = styled.h5`
   margin-bottom: 2px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: -0.025em;
 `;
 
 export const StyledAlertDescription = styled.div`
   font-size: 0.875rem;
+  margin-top: 8px;
   p {
     line-height: 1.625;
   }
