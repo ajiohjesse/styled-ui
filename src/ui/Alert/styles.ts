@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { RuleSet, css } from 'styled-components';
 import { AlertVariant } from './index';
 
 interface StyledAlertProps {
@@ -17,6 +17,11 @@ const destructiveAlertCss = css`
     color: hsl(${p => p.theme.colors.destructive});
   }
 `;
+
+const alertVariant: Record<AlertVariant, RuleSet<object>> = {
+  default: defaultAlertCss,
+  destructive: destructiveAlertCss,
+};
 
 export const StyledAlert = styled.div<StyledAlertProps>`
   position: relative;
@@ -40,7 +45,7 @@ export const StyledAlert = styled.div<StyledAlertProps>`
     transform: translateY(-3px);
   }
 
-  ${p => (p.$variant === 'destructive' ? destructiveAlertCss : defaultAlertCss)}
+  ${({ $variant }) => alertVariant[$variant]}
 `;
 
 export const StyledAlertTitle = styled.h5`

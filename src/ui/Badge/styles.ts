@@ -36,7 +36,7 @@ const outlineBadgeCss = css`
   color: hsl(${p => p.theme.colors.foreground});
 `;
 
-const customCss: Record<BadgeVariant, RuleSet<object>> = {
+const badgeVariant: Record<BadgeVariant, RuleSet<object>> = {
   default: defaultBadgeCss,
   secondary: secondaryBadgeCss,
   destructive: destructiveBadgeCss,
@@ -59,5 +59,5 @@ export const StyledBadge = styled.div<StyledBadgeProps>`
     outline-offset: 2px;
   }
 
-  ${({ $variant }) => customCss[$variant]}
+  ${({ $variant }) => badgeVariant[$variant]}
 `;

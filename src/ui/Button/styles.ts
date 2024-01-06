@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { RuleSet, css } from 'styled-components';
 import { ButtonSize, ButtonVariant } from './index';
 
 interface StyledButtonProps {
@@ -74,6 +74,22 @@ const linkButtonCss = css`
   }
 `;
 
+const buttonSize: Record<ButtonSize, RuleSet<object>> = {
+  default: normalSizeButtonCss,
+  icon: iconSizeButtonCss,
+  lg: largeSizeButtonCss,
+  sm: smallSizeButtonCss,
+};
+
+const buttonVariant: Record<ButtonVariant, RuleSet<object>> = {
+  default: defaultButtonCss,
+  secondary: secondaryButtonCss,
+  destructive: destructiveButtonCss,
+  ghost: ghostButtonCss,
+  outline: outlineButtonCss,
+  link: linkButtonCss,
+};
+
 export const StyledButton = styled.button<StyledButtonProps>`
   display: inline-flex;
   width: max-content;
@@ -95,25 +111,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
     opacity: 50%;
   }
 
-  ${({ $variant }) =>
-    $variant === 'destructive'
-      ? destructiveButtonCss
-      : $variant === 'ghost'
-        ? ghostButtonCss
-        : $variant === 'secondary'
-          ? secondaryButtonCss
-          : $variant === 'outline'
-            ? outlineButtonCss
-            : $variant === 'link'
-              ? linkButtonCss
-              : defaultButtonCss}
-
-  ${({ $size }) =>
-    $size === 'icon'
-      ? iconSizeButtonCss
-      : $size === 'sm'
-        ? smallSizeButtonCss
-        : $size === 'lg'
-          ? largeSizeButtonCss
-          : normalSizeButtonCss}
+  ${({ $variant }) => buttonVariant[$variant]}
+  ${({ $size }) => buttonSize[$size]}
 `;
