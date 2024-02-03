@@ -71,3 +71,9 @@ export const slideOutToTop = keyframes`
     transform: translateY(-100%);
   }
 `;
+
+export const rotate = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;

@@ -16,6 +16,7 @@ export interface ButtonProps extends React.ComponentProps<'button'> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   asChild?: boolean;
+  loading?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -26,6 +27,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       asChild = false,
       children,
       type = 'button',
+      loading = false,
       ...rest
     } = props;
 
@@ -36,6 +38,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         $size={size}
         ref={forwardedRef}
         children={children}
+        $loading={loading}
       />
     ) : (
       <StyledButton
@@ -44,6 +47,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         $size={size}
         ref={forwardedRef}
         children={children}
+        $loading={loading}
         {...rest}
       />
     );

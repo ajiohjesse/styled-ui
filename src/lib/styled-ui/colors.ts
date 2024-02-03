@@ -1,6 +1,9 @@
 import { ColorScheme } from './types';
 
 export const defaultColors: ColorScheme = {
+  white: '0, 0%, 98%',
+  black: '222.2, 84%, 4.9%',
+
   background: '0, 0%, 98%',
   foreground: '222.2, 84%, 4.9%',
 

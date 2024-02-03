@@ -1,9 +1,11 @@
+import { rotate } from '@/lib/styled-ui';
 import styled, { RuleSet, css } from 'styled-components';
 import { ButtonSize, ButtonVariant } from './index';
 
 interface StyledButtonProps {
   $variant: ButtonVariant;
   $size: ButtonSize;
+  $loading: boolean;
 }
 
 const smallSizeButtonCss = css`
@@ -27,6 +29,7 @@ const normalSizeButtonCss = css`
 `;
 
 const defaultButtonCss = css`
+  --loading-color: hsl(${p => p.theme.colors.primary_foreground});
   background-color: hsl(${p => p.theme.colors.primary});
   color: hsl(${p => p.theme.colors.primary_foreground});
   &:hover {
@@ -35,6 +38,7 @@ const defaultButtonCss = css`
 `;
 
 const destructiveButtonCss = css`
+  --loading-color: hsl(${p => p.theme.colors.destructive_foreground});
   background-color: hsl(${p => p.theme.colors.destructive});
   color: hsl(${p => p.theme.colors.destructive_foreground});
   &:hover {
@@ -43,15 +47,17 @@ const destructiveButtonCss = css`
 `;
 
 const outlineButtonCss = css`
+  --loading-color: hsl(${p => p.theme.colors.accent_foreground});
   border: 1px solid hsl(${p => p.theme.colors.border});
   background-color: hsl(${p => p.theme.colors.background});
+  color: hsl(${p => p.theme.colors.accent_foreground});
   &:hover {
     background-color: hsl(${p => p.theme.colors.accent});
-    color: hsl(${p => p.theme.colors.accent_foreground});
   }
 `;
 
 const secondaryButtonCss = css`
+  --loading-color: hsl(${p => p.theme.colors.secondary_foreground});
   background-color: hsl(${p => p.theme.colors.secondary});
   color: hsl(${p => p.theme.colors.secondary_foreground});
   &:hover {
@@ -60,6 +66,7 @@ const secondaryButtonCss = css`
 `;
 
 const ghostButtonCss = css`
+  --loading-color: hsl(${p => p.theme.colors.primary});
   &:hover {
     background-color: hsl(${p => p.theme.colors.accent});
     color: hsl(${p => p.theme.colors.accent_foreground});
@@ -67,10 +74,29 @@ const ghostButtonCss = css`
 `;
 
 const linkButtonCss = css`
+  --loading-color: hsl(${p => p.theme.colors.primary});
   color: hsl(${p => p.theme.colors.primary});
   text-underline-offset: 4px;
   &:hover {
     text-decoration: underline;
+  }
+`;
+
+const loadingButtonCss = css`
+  pointer-events: none;
+  color: transparent;
+  --spinner-size: 16px;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    border-radius: var(--spinner-size);
+    border: 2px solid var(--loading-color);
+    border-top-color: transparent;
+    animation: ${rotate} 600ms linear infinite;
   }
 `;
 
@@ -91,6 +117,7 @@ const buttonVariant: Record<ButtonVariant, RuleSet<object>> = {
 };
 
 export const StyledButton = styled.button<StyledButtonProps>`
+  position: relative;
   display: inline-flex;
   width: max-content;
   align-items: center;
@@ -113,4 +140,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
   ${({ $variant }) => buttonVariant[$variant]}
   ${({ $size }) => buttonSize[$size]}
+
+  ${p => p.$loading && loadingButtonCss}
 `;
