@@ -42,6 +42,7 @@ export const StyledAccordionTrigger = styled(AccordionPrimitive.Trigger)`
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  text-align: start;
   font-weight: 500;
   transition: 150ms;
   border-radius: ${p => p.theme.radius.md};
