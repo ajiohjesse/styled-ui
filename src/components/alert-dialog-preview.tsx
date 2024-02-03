@@ -8,9 +8,9 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '@/ui/AlertDialog';
-import Button from '@/ui/Button';
-import Section from './Section';
+} from '@/ui/alert-dialog';
+import Button from '@/ui/button';
+import Section from './section';
 
 const AlertDialogPreview = () => {
   return (

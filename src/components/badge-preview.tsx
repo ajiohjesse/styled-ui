@@ -1,5 +1,5 @@
-import Badge from '@/ui/Badge';
-import Section from './Section';
+import Badge from '@/ui/badge';
+import Section from './section';
 
 const BadgePreview = () => {
   return (

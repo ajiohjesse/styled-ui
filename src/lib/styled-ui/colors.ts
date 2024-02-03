@@ -1,4 +1,4 @@
-import { ColorScheme } from '../types';
+import { ColorScheme } from './types';
 
 export const defaultColors: ColorScheme = {
   background: '0, 0%, 98%',

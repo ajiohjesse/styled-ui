@@ -1,5 +1,5 @@
-import Button from '@/ui/Button';
-import Section from './Section';
+import Button from '@/ui/button';
+import Section from './section';
 
 const ButtonPreview = () => {
   return (

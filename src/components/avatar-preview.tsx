@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/ui/Avatar';
-import Section from './Section';
+import { Avatar, AvatarFallback, AvatarImage } from '@/ui/avatar';
+import Section from './section';
 
 const AvatarPreview = () => {
   return (

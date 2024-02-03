@@ -1,7 +1,7 @@
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import { forwardRef } from 'react';
-import { StyledAlertDescription } from '../Alert/styles';
-import Button from '../Button';
+import { StyledAlertDescription } from '../alert/styles';
+import Button from '../button';
 import {
   StyledAlertDialogContent,
   StyledAlertDialogFooter,

@@ -1,6 +1,6 @@
-import { Alert, AlertDescription, AlertTitle } from '@/ui/Alert';
+import { Alert, AlertDescription, AlertTitle } from '@/ui/alert';
 import { Terminal } from 'lucide-react';
-import Section from './Section';
+import Section from './section';
 
 const AlertPreview = () => {
   return (

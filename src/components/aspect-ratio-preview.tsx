@@ -1,5 +1,5 @@
-import { AspectRatio } from '@/ui/AspectRatio';
-import Section from './Section';
+import { AspectRatio } from '@/ui/aspect-ratio';
+import Section from './section';
 
 const AspectRatioPreview = () => {
   return (

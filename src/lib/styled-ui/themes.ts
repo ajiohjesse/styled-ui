@@ -1,4 +1,4 @@
-import { defaultColors } from './colors/defaultColors';
+import { defaultColors } from './colors';
 import { ThemeType } from './types';
 
 export const defaultTheme: ThemeType = {

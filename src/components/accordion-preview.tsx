@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/ui/Accordion';
-import Section from './Section';
+} from '@/ui/accordion';
+import Section from './section';
 
 const AccordionPreview = () => {
   return (

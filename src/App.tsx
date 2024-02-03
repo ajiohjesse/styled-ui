@@ -1,10 +1,10 @@
-import AccordionPreview from './components/AccordionPreview';
-import AlertDialogPreview from './components/AlertDialogPreview';
-import AlertPreview from './components/AlertPreview';
-import AspectRatioPreview from './components/AspectRatioPreview';
-import AvatarPreview from './components/AvatarPreview';
-import BadgePreview from './components/BadgePreview';
-import ButtonPreview from './components/ButtonPreview';
+import AccordionPreview from './components/accordion-preview';
+import AlertDialogPreview from './components/alert-dialog-preview';
+import AlertPreview from './components/alert-preview';
+import AspectRatioPreview from './components/aspect-ratio-preview';
+import AvatarPreview from './components/avatar-preview';
+import BadgePreview from './components/badge-preview';
+import ButtonPreview from './components/button-preview';
 
 function App() {
   return (

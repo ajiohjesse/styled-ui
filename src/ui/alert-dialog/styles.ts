@@ -1,4 +1,4 @@
-import { fadeIn, fadeOut } from '@/lib/styled-components/animations';
+import { fadeIn, fadeOut } from '@/lib/styled-ui/animations';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import styled, { css } from 'styled-components';
 
