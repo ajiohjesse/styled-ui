@@ -1,7 +1,4 @@
 export type ColorScheme = {
-  white: string;
-  black: string;
-
   background: string;
   foreground: string;
 
