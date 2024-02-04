@@ -1,9 +1,16 @@
+import { useColorScheme } from '@/lib/styled-ui';
 import Button from '@/ui/button';
 import Section from './section';
 
 const ButtonPreview = () => {
+  const { setColorScheme } = useColorScheme();
+
   return (
     <Section title='Button'>
+      <Button onClick={() => setColorScheme('light')}>Light mode</Button>
+      <Button onClick={() => setColorScheme('dark')}>Dark mode</Button>
+      <Button onClick={() => setColorScheme('system')}>System</Button>
+
       <Button asChild>
         <div>As child</div>
       </Button>

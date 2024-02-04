@@ -1,8 +1,7 @@
-import { defaultColors } from './colors';
+import { darkModeColors, defaultColors } from './colors';
 import { ThemeType } from './types';
 
-export const defaultTheme: ThemeType = {
-  colors: defaultColors,
+const sharedThemeValues: Omit<ThemeType, 'colors'> = {
   font: {
     sans: 'Inter, sans-serif',
   },
@@ -11,4 +10,14 @@ export const defaultTheme: ThemeType = {
     md: 'calc(0.5rem - 2px)',
     sm: 'calc(0.5rem - 4px)',
   },
+};
+
+export const defaultTheme: ThemeType = {
+  colors: defaultColors,
+  ...sharedThemeValues,
+};
+
+export const darkTheme: ThemeType = {
+  colors: darkModeColors,
+  ...sharedThemeValues,
 };

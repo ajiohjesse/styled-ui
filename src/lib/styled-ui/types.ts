@@ -1,4 +1,4 @@
-export type ColorScheme = {
+export type Colors = {
   background: string;
   foreground: string;
 
@@ -29,7 +29,7 @@ export type ColorScheme = {
 };
 
 export type ThemeType = {
-  colors: ColorScheme;
+  colors: Colors;
   font?: {
     sans: string;
     serif?: string;

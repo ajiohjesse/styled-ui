@@ -53,6 +53,7 @@ export const StyledBadge = styled.div<StyledBadgeProps>`
   font-weight: 600;
   transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke;
+  cursor: default;
 
   &:focus {
     outline: 1px solid hsl(${p => p.theme.colors.ring});
