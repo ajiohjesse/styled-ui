@@ -8,7 +8,6 @@ import {
   StyledAlertDialogHeader,
   StyledAlertDialogOverlay,
   StyledAlertDialogTitle,
-  alertDialogCancelCss,
 } from './styles';
 
 const AlertDialog = AlertDialogPrimitive.Root;
@@ -72,7 +71,7 @@ const AlertDialogCancel = forwardRef<
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
 >((props, ref) => (
   <AlertDialogPrimitive.Cancel asChild>
-    <Button ref={ref} {...props} variant='outline' css={alertDialogCancelCss} />
+    <Button ref={ref} {...props} variant='outline' />
   </AlertDialogPrimitive.Cancel>
 ));
 AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName;

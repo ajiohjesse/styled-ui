@@ -17,7 +17,7 @@ const AlertDialogPreview = () => {
     <Section title='AlertDialog'>
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button>Open Dialog</Button>
+          <Button>Open Alert Dialog</Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>

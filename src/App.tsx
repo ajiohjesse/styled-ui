@@ -5,6 +5,7 @@ import AspectRatioPreview from './components/aspect-ratio-preview';
 import AvatarPreview from './components/avatar-preview';
 import BadgePreview from './components/badge-preview';
 import ButtonPreview from './components/button-preview';
+import DialogPreview from './components/dialog-preview';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ButtonPreview />
       <AlertPreview />
       <AccordionPreview />
+      <DialogPreview />
       <AlertDialogPreview />
       <AspectRatioPreview />
       <AvatarPreview />

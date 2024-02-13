@@ -1,8 +1,8 @@
 import { fadeIn, fadeOut } from '@/lib/styled-ui/animations';
-import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+import * as DialogPrimitive from '@radix-ui/react-dialog';
 import styled from 'styled-components';
 
-export const StyledAlertDialogOverlay = styled(AlertDialogPrimitive.Overlay)`
+export const StyledDialogOverlay = styled(DialogPrimitive.Overlay)`
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -17,7 +17,7 @@ export const StyledAlertDialogOverlay = styled(AlertDialogPrimitive.Overlay)`
   }
 `;
 
-export const StyledAlertDialogContent = styled(AlertDialogPrimitive.Content)`
+export const StyledDialogContent = styled(DialogPrimitive.Content)`
   position: fixed;
   left: 50%;
   top: 50%;
@@ -48,7 +48,7 @@ export const StyledAlertDialogContent = styled(AlertDialogPrimitive.Content)`
   }
 `;
 
-export const StyledAlertDialogHeader = styled.div`
+export const StyledDialogHeader = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -59,7 +59,7 @@ export const StyledAlertDialogHeader = styled.div`
   }
 `;
 
-export const StyledAlertDialogFooter = styled.div`
+export const StyledDialogFooter = styled.div`
   display: flex;
   flex-direction: column-reverse;
   gap: 8px;
@@ -78,14 +78,45 @@ export const StyledAlertDialogFooter = styled.div`
   }
 `;
 
-export const StyledAlertDialogTitle = styled(AlertDialogPrimitive.Title)`
+export const StyledDialogTitle = styled(DialogPrimitive.Title)`
   font-size: 1.125rem;
   font-weight: 600;
 `;
 
-export const StyledAlertDialogDescription = styled(
-  AlertDialogPrimitive.Description,
-)`
+export const StyledDialogDescription = styled(DialogPrimitive.Description)`
   font-size: 0.875rem;
   color: hsl(${p => p.theme.colors.muted_foreground});
+`;
+
+export const StyledDialogClose = styled(DialogPrimitive.Close)`
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border-radius: ${p => p.theme.radius.sm};
+  opacity: 0.7;
+  transition: opacity 200ms ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid hsl(${p => p.theme.colors.ring});
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 50%;
+  }
+
+  &[data-state='open'] {
+    background-color: hsl(${p => p.theme.colors.accent});
+    color: hsl(${p => p.theme.colors.muted_foreground});
+  }
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 `;
