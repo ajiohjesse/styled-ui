@@ -6,6 +6,7 @@ import AvatarPreview from './components/avatar-preview';
 import BadgePreview from './components/badge-preview';
 import ButtonPreview from './components/button-preview';
 import DialogPreview from './components/dialog-preview';
+import PopoverPreview from './components/popover-preview';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <AspectRatioPreview />
       <AvatarPreview />
       <BadgePreview />
+      <PopoverPreview />
     </div>
   );
 }
