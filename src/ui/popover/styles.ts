@@ -10,6 +10,9 @@ export const StyledPopoverContent = styled(PopoverPrimitive.Content)`
   color: hsl(${p => p.theme.colors.popover_foreground});
   padding: 1rem;
   outline: none;
+  box-shadow: -2px 10px 12px -1px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: -2px 10px 12px -1px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: -2px 10px 12px -1px rgba(0, 0, 0, 0.19);
 
   &[data-state='open'] {
     animation: ${fadeIn} 200ms ease;
