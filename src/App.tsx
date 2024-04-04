@@ -4,6 +4,7 @@ import AlertPreview from './components/alert-preview';
 import AspectRatioPreview from './components/aspect-ratio-preview';
 import AvatarPreview from './components/avatar-preview';
 import BadgePreview from './components/badge-preview';
+import BreadcrumbPreview from './components/breadcrumb-preview';
 import ButtonPreview from './components/button-preview';
 import DialogPreview from './components/dialog-preview';
 import PopoverPreview from './components/popover-preview';
@@ -20,6 +21,7 @@ function App() {
       <AvatarPreview />
       <BadgePreview />
       <PopoverPreview />
+      <BreadcrumbPreview />
     </div>
   );
 }
