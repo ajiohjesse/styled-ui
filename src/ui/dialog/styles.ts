@@ -9,11 +9,11 @@ export const StyledDialogOverlay = styled(DialogPrimitive.Overlay)`
   background-color: hsla(0, 0%, 0%, 80%);
 
   &[data-state='open'] {
-    animation: ${fadeIn} 200ms linear;
+    animation: ${fadeIn} 100ms linear;
   }
 
   &[data-state='closed'] {
-    animation: ${fadeOut} 200ms linear;
+    animation: ${fadeOut} 100ms linear;
   }
 `;
 
