@@ -210,4 +210,8 @@ img {
   display: none;
 }
 
+#root,
+#__next {
+  isolation: isolate;
+}
 `;
