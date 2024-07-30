@@ -1,6 +1,7 @@
 import Input from '@/ui/input';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/ui/input-otp';
 import Label from '@/ui/label';
+import { Textarea } from '@/ui/textarea';
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from 'input-otp';
 import Section from './section';
 
@@ -29,6 +30,11 @@ const InputsPreview = () => {
             <InputOTPSlot index={5} />
           </InputOTPGroup>
         </InputOTP>
+      </fieldset>
+
+      <fieldset>
+        <Label htmlFor='desc'>Description</Label>
+        <Textarea id='desc'>Enter description</Textarea>
       </fieldset>
     </Section>
   );
