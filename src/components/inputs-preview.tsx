@@ -2,6 +2,7 @@ import Checkbox from '@/ui/checkbox';
 import Input from '@/ui/input';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/ui/input-otp';
 import Label from '@/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/ui/radio-group';
 import { Textarea } from '@/ui/textarea';
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from 'input-otp';
 import Section from './section';
@@ -43,6 +44,15 @@ const InputsPreview = () => {
       <fieldset style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
         <Checkbox id='check' name='check' />
         <Label htmlFor='check'>Description</Label>
+      </fieldset>
+
+      <fieldset style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+        <RadioGroup defaultValue='option-one'>
+          <RadioGroupItem value='option-one' id='option-one' />
+          <Label htmlFor='option-one'>Option One</Label>
+          <RadioGroupItem value='option-two' id='option-two' />
+          <Label htmlFor='option-two'>Option Two</Label>
+        </RadioGroup>
       </fieldset>
     </Section>
   );
