@@ -1,3 +1,4 @@
+import Checkbox from '@/ui/checkbox';
 import Input from '@/ui/input';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/ui/input-otp';
 import Label from '@/ui/label';
@@ -34,7 +35,14 @@ const InputsPreview = () => {
 
       <fieldset>
         <Label htmlFor='desc'>Description</Label>
-        <Textarea id='desc'>Enter description</Textarea>
+        <Textarea id='desc' name='desc'>
+          Enter description
+        </Textarea>
+      </fieldset>
+
+      <fieldset style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+        <Checkbox id='check' name='check' />
+        <Label htmlFor='check'>Description</Label>
       </fieldset>
     </Section>
   );
