@@ -10,7 +10,7 @@ import Section from './section';
 
 const BreadcrumbPreview = () => {
   return (
-    <Section title='Popover'>
+    <Section title='Breadcrumb'>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
