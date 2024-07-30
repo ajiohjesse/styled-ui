@@ -25,7 +25,7 @@ export const defaultColors: Colors = {
   destructive: '0, 84.2%, 60.2%',
   destructive_foreground: '210, 40%, 98%',
 
-  input: '214.3, 31.8%, 91.4%',
+  input: '214.3, 31.8%, 81.4%',
 
   border: '214.3, 31.8%, 91.4%',
   ring: '216, 100%, 50%',
