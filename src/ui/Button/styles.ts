@@ -1,4 +1,4 @@
-import { rotate } from '@/lib/styled-ui';
+import { disabledCss, focusCss, rotate } from '@/lib/styled-ui';
 import styled, { RuleSet, css } from 'styled-components';
 import { ButtonSize, ButtonVariant } from './index';
 
@@ -131,15 +131,9 @@ export const StyledButton = styled.button<StyledButtonProps>`
   font-weight: 500;
   cursor: pointer;
 
-  &:focus-visible {
-    outline: 2px solid hsl(${p => p.theme.colors.ring});
-    outline-offset: 2px;
-  }
-
-  &:disabled {
-    pointer-events: none;
-    opacity: 50%;
-  }
+  ${focusCss}
+  ${disabledCss}
+  
 
   ${({ $variant }) => buttonVariant[$variant]}
   ${({ $size }) => buttonSize[$size]}

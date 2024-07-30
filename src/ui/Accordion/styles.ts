@@ -1,3 +1,4 @@
+import { focusCss } from '@/lib/styled-ui';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
 import styled, { keyframes } from 'styled-components';
@@ -51,16 +52,13 @@ export const StyledAccordionTrigger = styled(AccordionPrimitive.Trigger)`
     text-decoration: underline;
   }
 
-  &:focus-visible {
-    outline: 2px solid hsl(${p => p.theme.colors.ring});
-    outline-offset: 2px;
-  }
-
   &[data-state='open'] {
     svg {
       transform: rotate(180deg);
     }
   }
+
+  ${focusCss}
 `;
 
 export const StyledAccordionContent = styled(AccordionPrimitive.Content)`

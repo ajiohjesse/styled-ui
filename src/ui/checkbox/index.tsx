@@ -1,4 +1,4 @@
-import { focusCss } from '@/lib/styled-ui';
+import { disabledCss, focusCss } from '@/lib/styled-ui';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { Check } from 'lucide-react';
 import { forwardRef } from 'react';
@@ -27,17 +27,13 @@ const StyledCheckbox = styled(CheckboxPrimitive.Root)`
   border-radius: ${p => p.theme.radius.md};
   border: 1px solid hsl(${p => p.theme.colors.primary});
 
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 50%;
-  }
-
   &[data-state='checked'] {
     background-color: hsl(${p => p.theme.colors.primary});
     color: hsl(${p => p.theme.colors.primary_foreground});
   }
 
   ${focusCss}
+  ${disabledCss}
 `;
 
 const StyledCheckboxIndicator = styled(CheckboxPrimitive.Indicator)`

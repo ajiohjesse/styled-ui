@@ -1,3 +1,4 @@
+import { disabledCss, focusCss } from '@/lib/styled-ui';
 import { fadeIn, fadeOut } from '@/lib/styled-ui/animations';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import styled from 'styled-components';
@@ -100,15 +101,8 @@ export const StyledDialogClose = styled(DialogPrimitive.Close)`
     opacity: 1;
   }
 
-  &:focus-visible {
-    outline: 2px solid hsl(${p => p.theme.colors.ring});
-    outline-offset: 2px;
-  }
-
-  &:disabled {
-    pointer-events: none;
-    opacity: 50%;
-  }
+  ${focusCss}
+  ${disabledCss}
 
   &[data-state='open'] {
     background-color: hsl(${p => p.theme.colors.accent});

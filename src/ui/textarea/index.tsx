@@ -1,3 +1,4 @@
+import { disabledCss, focusCss } from '@/lib/styled-ui';
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 
@@ -27,13 +28,6 @@ const StyledTextArea = styled.textarea`
     color: hsl(${p => p.theme.colors.muted_foreground});
   }
 
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 50%;
-  }
-
-  &:focus-visible {
-    outline: 2px solid hsl(${p => p.theme.colors.ring});
-    outline-offset: 2px;
-  }
+  ${focusCss}
+  ${disabledCss}
 `;
