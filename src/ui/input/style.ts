@@ -1,3 +1,4 @@
+import { disabledCss, focusCss } from '@/lib/styled-ui';
 import styled from 'styled-components';
 
 export const StyledInput = styled.input`
@@ -23,13 +24,6 @@ export const StyledInput = styled.input`
     appearance: none;
   }
 
-  &:focus-visible {
-    outline: 2px solid hsl(${p => p.theme.colors.ring});
-    outline-offset: 2px;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 50%;
-  }
+  ${focusCss}
+  ${disabledCss}
 `;

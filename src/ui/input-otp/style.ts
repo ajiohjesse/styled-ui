@@ -1,10 +1,9 @@
+import { disabledCss } from '@/lib/styled-ui';
 import styled, { css, keyframes } from 'styled-components';
 
 export const StyledInputOtp = styled.span`
   .styled-otp {
-    &:disabled {
-      cursor: not-allowed;
-    }
+    ${disabledCss}
   }
 
   .styled-container {
