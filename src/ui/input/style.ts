@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledInput = styled.input`
   display: flex;
+  align-items: center;
   height: 40px;
   width: 100%;
   border-radius: ${p => p.theme.radius.md};
@@ -15,8 +16,11 @@ export const StyledInput = styled.input`
   }
 
   &[type='file'] {
+    border: none;
+    background-color: transparent;
     font-size: 0.875rem;
-    font-weight: medium;
+    font-weight: 500;
+    appearance: none;
   }
 
   &:focus-visible {
