@@ -86,6 +86,9 @@ const loadingButtonCss = css`
   pointer-events: none;
   color: transparent;
   --spinner-size: 16px;
+  &::selection {
+    color: transparent;
+  }
 
   &::after {
     position: absolute;
