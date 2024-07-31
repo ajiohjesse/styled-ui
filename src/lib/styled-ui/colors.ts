@@ -1,4 +1,4 @@
-import { Colors } from './types';
+import type { Colors } from './types';
 
 export const defaultColors: Colors = {
   background: '0, 0%, 98%',
