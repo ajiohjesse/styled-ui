@@ -14,3 +14,9 @@ export const disabledCss = css`
     pointer-events: none;
   }
 `;
+
+export const shadowCss = css`
+  box-shadow: -2px 10px 12px -1px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: -2px 10px 12px -1px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: -2px 10px 12px -1px rgba(0, 0, 0, 0.19);
+`;
