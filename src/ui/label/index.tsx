@@ -14,6 +14,7 @@ const StyledLabel = styled.label`
   font-size: 0.875rem;
   line-height: 0;
   font-weight: 500;
+  user-select: none;
 
   & ~ input:disabled {
     opacity: 70%;
