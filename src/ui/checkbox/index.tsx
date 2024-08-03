@@ -10,7 +10,11 @@ const Checkbox = forwardRef<
 >((props, ref) => (
   <StyledCheckbox ref={ref} {...props}>
     <StyledCheckboxIndicator>
-      <StyledCheck />
+      {props.checked === 'indeterminate' ? (
+        <StyledIndeterminate />
+      ) : (
+        <StyledCheck />
+      )}
     </StyledCheckboxIndicator>
   </StyledCheckbox>
 ));
@@ -44,6 +48,14 @@ const StyledCheckboxIndicator = styled(CheckboxPrimitive.Indicator)`
 `;
 
 const StyledCheck = styled(Check)`
-  height: var(--checkbox-size);
-  width: var(--checkbox-size);
+  height: calc(var(--checkbox-size) - 6px);
+  width: calc(var(--checkbox-size) - 6px);
+  stroke-width: 4px;
+`;
+
+const StyledIndeterminate = styled.div`
+  height: calc(var(--checkbox-size) - 8px);
+  width: calc(var(--checkbox-size) - 8px);
+  background-color: hsl(${p => p.theme.colors.primary});
+  border-radius: ${p => p.theme.radius.sm};
 `;

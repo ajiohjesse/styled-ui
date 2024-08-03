@@ -53,7 +53,9 @@ const InputsPreview = () => {
 
       <fieldset style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
         <Checkbox id='check' name='check' />
-        <Label htmlFor='check'>Description</Label>
+        <Label htmlFor='check'>Option 1</Label>
+        <Checkbox id='check2' name='check2' checked='indeterminate' />
+        <Label htmlFor='check2'>Option 2</Label>
       </fieldset>
 
       <fieldset style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
