@@ -10,20 +10,16 @@ export const StyledCalendarWrapper = styled.span`
     display: flex;
   }
 
-  .styled-month {
-    /* margin-top: 4px; */
-  }
-
   .styled-caption {
     display: flex;
     position: relative;
     align-items: end;
+    justify-content: center;
   }
 
   .styled-caption-label {
     font-size: 0.875rem;
     font-weight: 500;
-    display: none;
   }
 
   .styled-caption-dropdowns {
@@ -37,6 +33,10 @@ export const StyledCalendarWrapper = styled.span`
 
     & ~ .styled-nav {
       margin-bottom: 68px;
+    }
+
+    & .styled-caption-label {
+      display: none;
     }
   }
 
