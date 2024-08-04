@@ -16,10 +16,10 @@ export const defaultColors: Colors = {
   secondary: '210, 30%, 80.1%',
   secondary_foreground: '222.2, 47.4%, 11.2%',
 
-  muted: '210, 40%, 96.1%',
+  muted: '210, 40%, 86.1%',
   muted_foreground: '215.4, 16.3%, 46.9%',
 
-  accent: '210, 40%, 96.1%',
+  accent: '210, 40%, 86.1%',
   accent_foreground: '222.2, 47.4%, 11.2%',
 
   destructive: '0, 84.2%, 60.2%',

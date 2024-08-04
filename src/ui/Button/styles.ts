@@ -110,7 +110,7 @@ const buttonSize: Record<ButtonSize, RuleSet<object>> = {
   sm: smallSizeButtonCss,
 };
 
-const buttonVariant: Record<ButtonVariant, RuleSet<object>> = {
+export const buttonVariant: Record<ButtonVariant, RuleSet<object>> = {
   default: defaultButtonCss,
   secondary: secondaryButtonCss,
   destructive: destructiveButtonCss,
@@ -119,7 +119,7 @@ const buttonVariant: Record<ButtonVariant, RuleSet<object>> = {
   link: linkButtonCss,
 };
 
-export const StyledButton = styled.button<StyledButtonProps>`
+export const baseButtonCss = css`
   position: relative;
   display: inline-flex;
   width: max-content;
@@ -133,8 +133,10 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
   ${focusCss}
   ${disabledCss}
-  
+`;
 
+export const StyledButton = styled.button<StyledButtonProps>`
+  ${baseButtonCss}
   ${({ $variant }) => buttonVariant[$variant]}
   ${({ $size }) => buttonSize[$size]}
 

@@ -6,6 +6,7 @@ import AvatarPreview from './components/avatar-preview';
 import BadgePreview from './components/badge-preview';
 import BreadcrumbPreview from './components/breadcrumb-preview';
 import ButtonPreview from './components/button-preview';
+import CalendarPreview from './components/calendar-preview';
 import DialogPreview from './components/dialog-preview';
 import InputsPreview from './components/inputs-preview';
 import PopoverPreview from './components/popover-preview';
@@ -24,6 +25,7 @@ function App() {
       <PopoverPreview />
       <BreadcrumbPreview />
       <InputsPreview />
+      <CalendarPreview />
     </div>
   );
 }
