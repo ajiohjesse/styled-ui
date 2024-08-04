@@ -7,7 +7,11 @@ const CalendarPreview = () => {
 
   return (
     <Section title='Calendar'>
-      <Calendar />
+      <Calendar
+        mode='single'
+        selected={date}
+        onSelect={date => setDate(date)}
+      />
       <Calendar
         mode='single'
         selected={date}
@@ -15,7 +19,6 @@ const CalendarPreview = () => {
         fromYear={1940}
         toYear={new Date().getFullYear()}
         captionLayout='dropdown'
-        initialFocus
       />
       <Calendar
         mode='single'
