@@ -4,8 +4,6 @@ import {
   fadeOut,
   focusCss,
   shadowCss,
-  slideInFromLeft,
-  slideInFromTop,
   zoomOut,
 } from '@/lib/styled-ui';
 import * as SelectPrimitive from '@radix-ui/react-select';
@@ -87,12 +85,6 @@ export const StyledSelectContent = styled(SelectPrimitive.Content)`
   }
   &[data-state='closed'] {
     animation-name: ${fadeOut}, ${zoomOut};
-  }
-  &[data-side='bottom'] {
-    animation-name: ${slideInFromTop};
-  }
-  &[data-side='right'] {
-    animation-name: ${slideInFromLeft};
   }
 `;
 
