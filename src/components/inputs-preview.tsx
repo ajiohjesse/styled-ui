@@ -1,4 +1,5 @@
 import Checkbox from '@/ui/checkbox';
+import DatePicker from '@/ui/date-picker';
 import Input from '@/ui/input';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/ui/input-otp';
 import Label from '@/ui/label';
@@ -87,6 +88,11 @@ const InputsPreview = () => {
             </SelectGroup>
           </SelectContent>
         </Select>
+
+        <fieldset style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+          <Label>Date</Label>
+          <DatePicker date={new Date()} setDate={() => {}} />
+        </fieldset>
       </div>
     </Section>
   );
